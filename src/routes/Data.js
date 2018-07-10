@@ -4,15 +4,15 @@ import Navbar from '../components/Navbar';
 import Jumbotron from '../components/Jumbotron';
 import MyCard from '../components/MyCard';
 import sections from '../constants/sections';
-const section = sections.find(({ id }) => id === 'presentation');
+const section = sections.find(({ id }) => id === 'data');
 
 export default class Homepage extends PureComponent {
     renderCards() {
         const { cards } = section.description;
         return cards.map(item => (
-            <Col className="col" span={8} key={item.title}>
+            <div className="card-wrapper" key={item.title}>
                 <MyCard { ...item } />
-            </Col>
+            </div>
         ));
     }
     render() {
@@ -20,9 +20,9 @@ export default class Homepage extends PureComponent {
             <Fragment>
                 <Navbar
                     sections={sections}
-                    selectedKeys={['presentation']}
+                    selectedKeys={['data']}
                 />
-                <div id="presentation" className="main">
+                <div id="data" className="main">
                     <Jumbotron
                         { ...section.jumbotron }
                     />

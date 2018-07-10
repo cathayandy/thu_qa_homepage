@@ -2,39 +2,39 @@
     font-family: PingFangSC, sans-serif;
 }
 .header-height(@property) {
-    @{property}: 90px;
+    @{property}: 4.69vw;
     @media (max-width: 575px) {
-        @{property}: 90px;
+        @{property}: 4.69vw;
     }
     @media (min-width: 1200px) {
-        @{property}: 90px;
+        @{property}: 4.69vw;
     }
 }
 .header-text-size(@property) {
-    @{property}: 28px;
+    @{property}: 1.46vw;
     @media (max-width: 575px) {
-        @{property}: 28px;
+        @{property}: 1.46vw;
     }
     @media (min-width: 1200px) {
-        @{property}: 28px;
+        @{property}: 1.46vw;
     }
 }
 .logo-height(@property) {
-    @{property}: 64px;
+    @{property}: 3.33vw;
     @media (max-width: 575px) {
-        @{property}: 64px;
+        @{property}: 3.33vw;
     }
     @media (min-width: 1200px) {
-        @{property}: 64px;
+        @{property}: 3.33vw;
     }
 }
 .padding(@property) {
-    @{property}: 22px;
+    @{property}: 1.15vw;
     @media (max-width: 575px) {
         @{property}: 0 20%;
     }
     @media (min-width: 1200px) {
-        @{property}: 22px;
+        @{property}: 1.15vw;
     }
 }
 
@@ -71,13 +71,14 @@
     width: 100%;
 }
 .wrapper {
-    margin: 0 14.0625%;
+    margin-left: 14.0625%;
+    margin-right: 14.0625%;
 }
 .pane {
     width: 100%;
     padding-left: 25%;
-    padding-top: 70px;
-    height: 450px;
+    padding-top: 3.65vw;
+    height: 23.44vw;
     background-image: url("assets/images/bgs/home.jpg");
     background-position: center;
     background-size: cover;
@@ -86,19 +87,29 @@
     color: white;
 }
 .pane h1 {
-    font-size: 64px;
+    font-size: 3.33vw;
 }
 .pane h3 {
-    font-size: 36px;
+    font-weight: normal;
+    font-size: 1.875vw;
 }
-/*
-.row {
-    margin: 0 -@row-gutter;
+.description .ant-card-meta-title {
+    font-size: 1.4vw;
+    text-align: center;
 }
-.row .col {
-    padding: 0 @row-gutter;
+.ant-card-meta-description {
+    font-size: 1.15vw;
+    padding-left: 1.04vw;
+    padding-right: 1.04vw;
+    text-align: center;
 }
-*/
+.ant-card-actions * {
+    font-size: 1.15vw;
+}
+hr {
+    width: 5vw;
+    border: 2px solid @nav-bg;
+}
 #home .img-container {
     .logo-height(height);
     .padding(padding);
@@ -114,26 +125,80 @@
     vertical-align: middle;    
     width: 100%;
 }
-#home .description {
-    margin-top: 80px;
+.description {
+    margin-top: 4.17vw;
+    margin-bottom: 4.17vw;
 }
-#home .description * {
-    color: @font-color;
+.description * {
+    color: @font-color !important;
 }
 #home h5 {
-    font-size: 24px;
+    font-size: 1.25vw;
+    margin-bottom: 2.08vw;
 }
 #home p {
-    font-size: 22px;
+    font-size: 1.15vw;
 }
 #home .left-col {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 70px;
-    padding-right: 110px;
+    padding-top: 2.08vw;
+    padding-bottom: 2.08vw;
+    padding-left: 3.65vw;
+    padding-right: 5.73vw;
     border-right: 2px solid @border;
 }
 #home .right-col {
-    padding-left: 70px;
-    padding-right: 40px;
+    padding-left: 3.65vw;
+    padding-right: 2.08vw;
+}
+#tools .col {
+    padding-left: 2.08vw;
+    padding-right: 2.08vw;
+}
+#presentation .col {
+    padding-left: 2.08vw;
+    padding-right: 2.08vw;
+}
+.block {
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+}
+.item {
+    display: inline-block;
+    margin-top: 2.08vw;
+    margin-bottom: 2.08vw;
+    padding-left: 1.04vw;
+    padding-right: 1.04vw;
+    width: 12.5vw;
+}
+.last {
+    border-right: 2px solid @border;
+}
+#algorithm h4 {
+    font-size: 1.4vw;
+    text-align: center;
+}
+#algorithm h5 {
+    font-size: 1.25vw;
+    margin-bottom: 2.08vw;
+}
+#algorithm p {
+    font-size: 1.15vw;
+}
+#algorithm .wrapper {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#data .wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1.04vw;
+    padding-right: 1.04vw;
+}
+#data .card-wrapper {
+    display: inline-block;
+    width: 20%;
+    padding-left: 1.04vw;
+    padding-right: 1.04vw;
 }

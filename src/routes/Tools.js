@@ -2,32 +2,18 @@ import React, { PureComponent, Fragment } from 'react';
 import { Row, Col } from 'antd';
 import Navbar from '../components/Navbar';
 import Jumbotron from '../components/Jumbotron';
+import MyCard from '../components/MyCard';
 import sections from '../constants/sections';
-const section = sections.find(({ id }) => id === 'home');
+const section = sections.find(({ id }) => id === 'tools');
 
 export default class Homepage extends PureComponent {
-    renderCollaborators() {
-        const { collaborators } = section.description;
-        const items = collaborators.map((img, idx) => (
-            <Col
-                xs={12}
-                sm={6}
-                key={idx}
-                id={`collaborator-${idx}`}
-                className="col"
-            >
-                <div className="img-container">
-                    <img src={img} />
-                </div>
+    renderCards() {
+        const { cards } = section.description;
+        return cards.map(item => (
+            <Col className="col" span={8} key={item.title}>
+                <MyCard { ...item } />
             </Col>
         ));
-        const columns = [];
-        for (let i = 0; i < items.length; i += 4) {
-            columns.push(items.slice(i, i + 4));
-        }
-        return columns.map((items, idx) =>
-            <Row key={idx} className="row">{ items }</Row>
-        );
     }
     render() {
         return (
@@ -40,15 +26,9 @@ export default class Homepage extends PureComponent {
                     <Jumbotron
                         { ...section.jumbotron }
                     />
-                    <div className="wrapper">
+                    <div className="description wrapper">
                         <Row>
-                            <Col span={12}>
-                                <h5>{ section.description.title }</h5>
-                                <p>{ section.description.content }</p>
-                            </Col>
-                            <Col span={12}>
-                                { this.renderCollaborators() }
-                            </Col>
+                            { this.renderCards() }
                         </Row>
                     </div>
                 </div>

@@ -12,12 +12,21 @@ function RouterConfig({ history, app }) {
     const Presentation = dynamic({
         app, component: () => import('./routes/Presentation'),
     });
+    const Algorithm = dynamic({
+        app, component: () => import('./routes/Algorithm'),
+    });
+    const Data = dynamic({
+        app, component: () => import('./routes/Data'),
+    });
     return (
         <Router history={history}>
             <Switch>
                 <Route exact path="/" component={Homepage} />
                 <Route exact path="/tools" component={Tools} />
                 <Route exact path="/presentation" component={Presentation} />
+                <Route exact path="/algorithm" component={Algorithm} />
+                <Route exact path="/data" component={Data} />
+                <Route component={Homepage} />
             </Switch>
         </Router>
     );
