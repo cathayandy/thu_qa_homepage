@@ -1,0 +1,139 @@
+* {
+    font-family: PingFangSC, sans-serif;
+}
+.header-height(@property) {
+    @{property}: 90px;
+    @media (max-width: 575px) {
+        @{property}: 90px;
+    }
+    @media (min-width: 1200px) {
+        @{property}: 90px;
+    }
+}
+.header-text-size(@property) {
+    @{property}: 28px;
+    @media (max-width: 575px) {
+        @{property}: 28px;
+    }
+    @media (min-width: 1200px) {
+        @{property}: 28px;
+    }
+}
+.logo-height(@property) {
+    @{property}: 64px;
+    @media (max-width: 575px) {
+        @{property}: 64px;
+    }
+    @media (min-width: 1200px) {
+        @{property}: 64px;
+    }
+}
+.padding(@property) {
+    @{property}: 22px;
+    @media (max-width: 575px) {
+        @{property}: 0 20%;
+    }
+    @media (min-width: 1200px) {
+        @{property}: 22px;
+    }
+}
+
+
+@nav-bg: #2C3E50;
+@nav-selected: #34495E;
+@border: #BDC3C7;
+@font-color: @nav-selected;
+#root {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#header {
+    .header-height(height);
+    .header-height(line-height);
+    background: @nav-bg;
+    width: 100%;
+}
+#header * {
+    .header-text-size(font-size);
+}
+#header .ant-menu-item {
+    padding: 0;
+    width: 16%;
+    text-align: center;
+}
+#header .ant-menu-item-selected {
+    background: @nav-selected;
+}
+.main {
+    width: 100%;
+}
+.wrapper {
+    margin: 0 14.0625%;
+}
+.pane {
+    width: 100%;
+    padding-left: 25%;
+    padding-top: 70px;
+    height: 450px;
+    background-image: url("assets/images/bgs/home.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.pane * {
+    color: white;
+}
+.pane h1 {
+    font-size: 64px;
+}
+.pane h3 {
+    font-size: 36px;
+}
+/*
+.row {
+    margin: 0 -@row-gutter;
+}
+.row .col {
+    padding: 0 @row-gutter;
+}
+*/
+#home .img-container {
+    .logo-height(height);
+    .padding(padding);
+}
+.img-container {
+    overflow: hidden;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.img-container img {
+    vertical-align: middle;    
+    width: 100%;
+}
+#home .description {
+    margin-top: 80px;
+}
+#home .description * {
+    color: @font-color;
+}
+#home h5 {
+    font-size: 24px;
+}
+#home p {
+    font-size: 22px;
+}
+#home .left-col {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 70px;
+    padding-right: 110px;
+    border-right: 2px solid @border;
+}
+#home .right-col {
+    padding-left: 70px;
+    padding-right: 40px;
+}
