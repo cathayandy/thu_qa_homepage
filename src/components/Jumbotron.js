@@ -2,7 +2,10 @@ import React, { PureComponent } from 'react';
 
 export default class Jumbotron extends PureComponent {
     renderSubtitles() {
-        const { subtitle = [] } = this.props;
+        let { subtitle = [] } = this.props;
+        if (typeof subtitle === 'string') {
+            subtitle = [subtitle];
+        }
         return subtitle.map(title => <h3 key={title}>{ title }</h3>);
     }
     render() {

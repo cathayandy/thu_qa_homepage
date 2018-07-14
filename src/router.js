@@ -18,6 +18,12 @@ function RouterConfig({ history, app }) {
     const Data = dynamic({
         app, component: () => import('./routes/Data'),
     });
+    const Detail = dynamic({
+        app, component: () => import('./routes/Detail'),
+    });
+    const Demo = dynamic({
+        app, component: () => import('./routes/Demo'),
+    });
     return (
         <Router history={history}>
             <Switch>
@@ -26,6 +32,12 @@ function RouterConfig({ history, app }) {
                 <Route exact path="/presentation" component={Presentation} />
                 <Route exact path="/algorithm" component={Algorithm} />
                 <Route exact path="/data" component={Data} />
+                <Route exact path="/datasets_details/:id" component={Detail} />
+                <Route exact path="/code_details/:id" component={Detail} />
+                <Route exact path="/demo_details/:id" component={Detail} />
+                <Route exact path="/tool_doc/:id" component={Detail} />
+                <Route exact path="/demo_info/:id" component={Detail} />
+                <Route exact path="/tool_demo/:id" component={Demo} />
                 <Route component={Homepage} />
             </Switch>
         </Router>

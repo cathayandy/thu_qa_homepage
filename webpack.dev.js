@@ -2,6 +2,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const apiMocker = require('webpack-api-mocker');
 const common = require('./webpack.common.js');
 
 module.exports = merge.smart(common, {
@@ -32,6 +33,12 @@ module.exports = merge.smart(common, {
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'),
         historyApiFallback: true,
+        before(app) {
+            apiMocker(app, path.resolve(__dirname, 'mocker/index.js'));
+        },
+        proxy: {
+            '/api': 'http://localhost:3000',
+        }
     },
     module: {
         rules: [{

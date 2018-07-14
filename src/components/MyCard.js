@@ -1,15 +1,16 @@
 import React, { PureComponent, Fragment } from 'react';
 import { Icon, Card } from 'antd';
+import { Link } from 'dva/router';
 const { Meta } = Card;
 
 export default class MyCard extends PureComponent {
     render() {
         const { cover, actions = [], title, content } = this.props;
-        const actionButtons = actions.map(text => (
-            <span>
+        const actionButtons = actions.map(([text, url]) => (
+            <Link key={text} to={url}>
                 { text }
                 <Icon type="right" />
-            </span>
+            </Link>
         ));
         const titleWithHr = (
             <Fragment>
@@ -21,7 +22,7 @@ export default class MyCard extends PureComponent {
             <Card
                 hoverable
                 style={{ width: '100%' }}
-                cover={cover}
+                cover={<img alt="icon" src={cover} />}
                 actions={actionButtons}
             >
                 <Meta

@@ -1,5 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
 import { Row, Col } from 'antd';
+import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Jumbotron from '../components/Jumbotron';
 import sections from '../constants/sections';
@@ -52,6 +53,7 @@ export default class Homepage extends PureComponent {
                         </Row>
                     </div>
                 </div>
+                <Footer />
             </Fragment>
         );
     }
