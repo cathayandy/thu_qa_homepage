@@ -23,7 +23,7 @@ const proxy = {
         res.send({
             title: `Title ${id}`,
             subtitle: `Subtitle ${id}`,
-            url: 'http://www.baidu.com',
+            src: 'http://www.baidu.com',
         });
     },
 }

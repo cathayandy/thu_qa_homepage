@@ -34,7 +34,7 @@ class Demo extends PureComponent {
         this.getData();
     }
     render() {
-        const { title, subtitle, url: src } = this.state;
+        const { title, subtitle, src } = this.state;
         return (
             <Fragment>
                 <Navbar
