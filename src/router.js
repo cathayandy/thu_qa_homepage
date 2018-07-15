@@ -32,7 +32,7 @@ function RouterConfig({ history, app }) {
                 <Route exact path="/presentation" component={Presentation} />
                 <Route exact path="/algorithm" component={Algorithm} />
                 <Route exact path="/data" component={Data} />
-                <Route exact path="/datasets_details/:id" component={Detail} />
+                <Route exact path="/dataset_details/:id" component={Detail} />
                 <Route exact path="/code_details/:id" component={Detail} />
                 <Route exact path="/demo_details/:id" component={Detail} />
                 <Route exact path="/tool_doc/:id" component={Detail} />

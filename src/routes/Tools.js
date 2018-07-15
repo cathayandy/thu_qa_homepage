@@ -7,7 +7,7 @@ import MyCard from '../components/MyCard';
 import sections from '../constants/sections';
 const section = sections.find(({ id }) => id === 'tools');
 
-export default class Homepage extends PureComponent {
+export default class Tools extends PureComponent {
     renderCards() {
         const { cards } = section.description;
         return cards.map(item => (

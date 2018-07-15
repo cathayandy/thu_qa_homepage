@@ -35,11 +35,17 @@ Homepage for [THU Q&A System](http://cathayandy.com:8899). Built using [Dva.js](
 
     npm config set registry https://registry.npm.taobao.org/
 
-## Customize
+# Development
 
-*   Edit `src/constants/en_US.js` to customize texts.
+*   mock
 
-*   Add images to `src/assets/images` and import them in `src/constants/en_US.js` if you want to add or change imgs.
+    Edit `mocker/index.js` to mock apis. See https://github.com/jaywcjlove/webpack-api-mocker for details.
+
+* Customization
+
+    *   Edit `src/constants/sections.js` to customize texts.
+
+    *   Add images to `src/assets/images` and import them in `src/constants/sections.js` if you want to add or change imgs.
 
 ## Nginx Configuration
 

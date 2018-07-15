@@ -1,4 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
+import { connect } from 'dva';
 import { Row, Col } from 'antd';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -7,12 +8,13 @@ import MyCard from '../components/MyCard';
 import sections from '../constants/sections';
 const section = sections.find(({ id }) => id === 'data');
 
-export default class Homepage extends PureComponent {
+class Data extends PureComponent {
     renderCards() {
         const { cards } = section.description;
+        const { history } = this.props;
         return cards.map(item => (
             <div className="card-wrapper" key={item.title}>
-                <MyCard { ...item } />
+                <MyCard { ...item } history={history} />
             </div>
         ));
     }
@@ -38,3 +40,5 @@ export default class Homepage extends PureComponent {
         );
     }
 }
+
+export default connect()(Data);

@@ -5,6 +5,7 @@ function reqAll(ctx) {
 }
 const bgs = reqAll(require.context('../assets/images/bgs', true));
 const collaborators = reqAll(require.context('../assets/images/collaborators', true));
+const icons = reqAll(require.context('../assets/images/icons', true));
 const bgHome = bgs['home.png'];
 
 export default [{
@@ -62,7 +63,7 @@ export default [{
     },
     description: {
         cards: [{
-            cover: bgs['bg1.png'],
+            cover: icons['icon1.png'],
             title: '趣答',
             content: '是一个静态的、白盒的软件源代码安全测试工具。其中一个是静态的，白盒的软件还记得看书看到回复源代码安全测试工具，源代码安全测试工具源代码安全测试工具，代码安全测试工具，个静态的、白盒的',
             actions: [
@@ -70,7 +71,7 @@ export default [{
                 ['系统入口', '/demo_demo/1'],
             ],
         }, {
-            cover: bgs['bg2.png'],
+            cover: icons['icon2.png'],
             title: '点餐',
             content: '是一个静态的、白盒的软件源代码安全测试工具。其中一个是静态的，白盒的软件还记得看书看到回复源代码安全测试工具，源代码安全测试工具源代码安全测试工具，代码安全测试工具，个静态的、白盒的',
             actions: [
@@ -78,7 +79,7 @@ export default [{
                 ['系统入口', '/demo_demo/1'],
             ],
         }, {
-            cover: bgs['bg3.png'],
+            cover: icons['icon3.png'],
             title: '餐厅预约',
             content: '是一个静态的、白盒的软件源代码安全测试工具。其中一个是静态的，白盒的软件还记得看书看到回复源代码安全测试工具，源代码安全测试工具源代码安全测试工具，代码安全测试工具，个静态的、白盒的',
             actions: [
@@ -143,27 +144,27 @@ export default [{
     },
     description: {
         cards: [{
-            cover: bgs['bg1.png'],
+            cover: icons['icon1.png'],
             title: '情绪对话',
             content: '是一个静态的、白盒的软件源代码安全测试工具。其中一个是静态的，白盒的软件还记得看书看到回复源代码安全测试工具，源代码安全测试工具源代码安全测试工具，代码安全测试工具，个静态的、白盒的',
             link: '/dataset_details/1',
         }, {
-            cover: bgs['bg2.png'],
+            cover: icons['icon2.png'],
             title: '常识对话',
             content: '是一个静态的、白盒的软件源代码安全测试工具。其中一个是静态的，白盒的软件还记得看书看到回复源代码安全测试工具，源代码安全测试工具源代码安全测试工具，代码安全测试工具，个静态的、白盒的',
             link: '/dataset_details/2',
         }, {
-            cover: bgs['bg3.png'],
+            cover: icons['icon3.png'],
             title: '问题生成',
             content: '是一个静态的、白盒的软件源代码安全测试工具。其中一个是静态的，白盒的软件还记得看书看到回复源代码安全测试工具，源代码安全测试工具源代码安全测试工具，代码安全测试工具，个静态的、白盒的',
             link: '/dataset_details/3',
         }, {
-            cover: bgs['bg4.png'],
+            cover: icons['icon4.png'],
             title: 'Path Question',
             content: '是一个静态的、白盒的软件源代码安全测试工具。其中一个是静态的，白盒的软件还记得看书看到回复源代码安全测试工具，源代码安全测试工具源代码安全测试工具，代码安全测试工具，个静态的、白盒的',
             link: '/dataset_details/4',
         }, {
-            cover: bgs['bg5.png'],
+            cover: icons['icon5.png'],
             title: '句式定制',
             content: '是一个静态的、白盒的软件源代码安全测试工具。其中一个是静态的，白盒的软件还记得看书看到回复源代码安全测试工具，源代码安全测试工具源代码安全测试工具，代码安全测试工具，个静态的、白盒的',
             link: '/dataset_details/5',

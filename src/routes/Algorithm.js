@@ -8,7 +8,7 @@ import MyCard from '../components/MyCard';
 import sections from '../constants/sections';
 const section = sections.find(({ id }) => id === 'algorithm');
 
-export default class Homepage extends PureComponent {
+export default class Algorithm extends PureComponent {
     renderItems(items) {
         return items.map(({ title, content, link }, idx) => {
             let className = 'item';
