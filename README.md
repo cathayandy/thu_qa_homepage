@@ -35,7 +35,7 @@ Homepage for [THU Q&A System](http://cathayandy.com:8899). Built using [Dva.js](
 
     npm config set registry https://registry.npm.taobao.org/
 
-# Development
+## Development
 
 *   mock
 
