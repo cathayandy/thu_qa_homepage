@@ -24,6 +24,9 @@ function RouterConfig({ history, app }) {
     const Demo = dynamic({
         app, component: () => import('./routes/Demo'),
     });
+    const _404 = dynamic({
+        app, component: () => import('./routes/404'),
+    });
     return (
         <Router history={history}>
             <Switch>
@@ -34,11 +37,11 @@ function RouterConfig({ history, app }) {
                 <Route exact path="/data" component={Data} />
                 <Route exact path="/dataset_details/:id" component={Detail} />
                 <Route exact path="/code_details/:id" component={Detail} />
-                <Route exact path="/demo_details/:id" component={Detail} />
                 <Route exact path="/tool_doc/:id" component={Detail} />
-                <Route exact path="/demo_info/:id" component={Detail} />
+                <Route exact path="/demo_doc/:id" component={Detail} />
                 <Route exact path="/tool_demo/:id" component={Demo} />
-                <Route component={Homepage} />
+                <Route exact path="/demo_demo/:id" component={Demo} />
+                <Route component={_404} />
             </Switch>
         </Router>
     );

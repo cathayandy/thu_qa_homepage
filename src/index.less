@@ -44,6 +44,9 @@
 @border: #BDC3C7;
 @font-color: @nav-selected;
 @white-font-color: rgba(255, 255, 255, 0.65);
+body {
+    background: @nav-bg !important;
+}
 #root {
     position: absolute;
     left: 0;
@@ -70,6 +73,8 @@
 }
 .main {
     width: 100%;
+    background: white;
+    padding-bottom: 4.17vw;
 }
 .wrapper {
     margin-left: 14.0625%;
@@ -98,8 +103,9 @@
     font-size: 1.4vw;
     text-align: center;
     white-space: normal;
+    margin-bottom: 0.42vw !important;
 }
-.ant-card-body {
+.description .ant-card-body {
     padding: 1.25vw;
 }
 .ant-card-meta-description {
@@ -112,6 +118,8 @@
 }
 hr {
     width: 5vw;
+    margin-top: 0.42vw;
+    margin-bottom: 0.42vw;
     border: 2px solid @nav-bg;
 }
 #home .img-container {
@@ -131,7 +139,6 @@ hr {
 }
 .description {
     margin-top: 4.17vw;
-    margin-bottom: 4.17vw;
 }
 .description * {
     color: @font-color !important;
@@ -174,12 +181,18 @@ hr {
     padding-left: 1.04vw;
     padding-right: 1.04vw;
     width: 12.5vw;
-}
-.item.last {
     border-right: 2px solid @border;
 }
-.last .item.last {
+.item.last {
     border: 0;
+}
+.ant-tabs-ink-bar {
+    background: @nav-bg !important;
+    height: 4px !important;
+}
+.ant-tabs-bar {
+    border-bottom: 1px solid @border !important;
+    margin-bottom: 0.84vw !important;
 }
 #algorithm h4 {
     font-size: 1.4vw;
@@ -187,15 +200,15 @@ hr {
 }
 #algorithm h5 {
     font-size: 1.25vw;
-    margin-bottom: 2.08vw;
 }
 #algorithm p {
     font-size: 1.15vw;
+    margin-top: 0.84vw;    
+    margin-bottom: 0;
+    text-align: left;
 }
 #algorithm .wrapper {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 #data .wrapper {
     margin-left: 0;
@@ -205,6 +218,7 @@ hr {
 }
 #data .card-wrapper {
     display: inline-block;
+    vertical-align: top;
     width: 20%;
     padding-left: 1.04vw;
     padding-right: 1.04vw;
@@ -222,4 +236,10 @@ hr {
     height: 4.69vw;
     line-height: 4.69vw;
     width: 100%;
+}
+#_404.main {
+    padding: 0;
+}
+#_404 .pane {
+    height: 40vw;
 }
