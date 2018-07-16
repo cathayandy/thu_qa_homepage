@@ -2,6 +2,7 @@ import dva from 'dva';
 import createBrowserHistory from 'history/createBrowserHistory';
 import router from './router';
 import './index.less';
+require('isomorphic-fetch');
 
 const app = dva({
     history: createBrowserHistory(),
