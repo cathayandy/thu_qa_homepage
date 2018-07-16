@@ -4,7 +4,7 @@
   "description": "Homepage for THU Q&A System",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
+    "start": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.js",
     "build": "rm -rf dist && webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
