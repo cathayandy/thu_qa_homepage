@@ -21,6 +21,9 @@ function RouterConfig({ history, app }) {
     const Detail = dynamic({
         app, component: () => import('./routes/Detail'),
     });
+    const Doc = dynamic({
+        app, component: () => import('./routes/Doc'),
+    });
     const Demo = dynamic({
         app, component: () => import('./routes/Demo'),
     });
@@ -37,7 +40,7 @@ function RouterConfig({ history, app }) {
                 <Route exact path="/data" component={Data} />
                 <Route exact path="/dataset_details/:id" component={Detail} />
                 <Route exact path="/code_details/:id" component={Detail} />
-                <Route exact path="/tool_doc/:id" component={Detail} />
+                <Route exact path="/tool_doc/:id" component={Doc} />
                 <Route exact path="/demo_doc/:id" component={Detail} />
                 <Route exact path="/tool_demo/:id" component={Demo} />
                 <Route exact path="/demo_demo/:id" component={Demo} />

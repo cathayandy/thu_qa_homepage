@@ -29,9 +29,6 @@ module.exports = {
                 loader: 'babel-loader',
             },
         }, {
-            test: /\.json$/,
-            loader: 'json-loader',
-        }, {
             test: /\.(png|jpg|jpeg|gif|eot|ttf|svg|woff|woff2)$/,
             loader: 'url-loader?limit=1000',
         },],

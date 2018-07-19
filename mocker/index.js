@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const proxy = {
     'GET /api/dataset_details/:id': (req, res) => {
         const { id } = req.params;
@@ -14,7 +16,9 @@ const proxy = {
         res.send({
             title: `Title ${id}`,
             subtitle: `Subtitle ${id}`,
-            text: '<p>tool_doc</p>'.repeat(10).repeat(id),
+            text: '## Title\n\n* content\n\n'.repeat(30).repeat(id),
+                // To test from a real md file:
+                // fs.readFileSync('mocker/tool_doc.md').toString(),
         });
     },
     'GET /api/tool_demo/:id': (req, res) => {
