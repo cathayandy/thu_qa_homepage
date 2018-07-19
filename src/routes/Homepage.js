@@ -42,7 +42,8 @@ export default class Homepage extends PureComponent {
                         { ...section.jumbotron }
                     />
                     <div className="description wrapper">
-                        <Row>
+                        <div id="leftup"></div>
+                        <Row type="flex" align="middle">
                             <Col className="left-col" span={12}>
                                 <h5>{ section.description.title }</h5>
                                 <p>{ section.description.content }</p>
@@ -51,6 +52,7 @@ export default class Homepage extends PureComponent {
                                 { this.renderCollaborators() }
                             </Col>
                         </Row>
+                        <div id="rightbottom"></div>
                     </div>
                 </div>
                 <Footer />
