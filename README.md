@@ -1,6 +1,6 @@
 # Homepage for THU Q&A System
 
-Homepage for [THU Q&A System](http://cathayandy.com:8899). Built using [Dva.js](https://github.com/dvajs/dva), [Ant Design](https://ant.design) and [Webpack](https://webpack.js.org/).
+Homepage for [THU Q&A System](http://coai.cs.tsinghua.edu.cn/ds/). Built using [Dva.js](https://github.com/dvajs/dva), [Ant Design](https://ant.design) and [Webpack](https://webpack.js.org/).
 
 ## Prerequisite
 
